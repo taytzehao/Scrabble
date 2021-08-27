@@ -1,0 +1,233 @@
+@font-face {
+    font-family: "Scrabble_font";
+    src:url("../eurostile-font/EuroStyleNormal.ttf");
+}
+.main_divider{
+    display:grid;
+    grid-template-columns:20vw 60vw 20vw ;
+    grid-template-rows: 100vh;
+    justify-items: center;
+
+}
+.board_holder{
+    grid-column:2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.board{
+    width: 75vh;
+    height: 75vh;
+    font-size: 1.2vh; 
+}
+
+.bl{
+    border: 1.5px solid;
+    display: flex;
+    align-items: center;
+    text-align: center;  
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.tw{
+    background-color:rgb(240, 21, 21)
+}
+
+.dw{
+    background-color:rgb(246, 227, 186)
+}
+
+.dl{
+    background-color:rgb(166, 222, 248)
+}
+
+.tl{
+    background-color:rgb(89, 192, 240)
+}
+
+.main_game{
+    display:grid;
+    grid-column: 2;
+    grid-template-columns:20vh 80vh 20vh ;
+    grid-template-rows: 10vh 80vh 10vh;
+    /*position:fixed;
+    left:10%;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    
+}
+
+.remainder_container{
+    width:20vw;
+    height:90vh;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+}
+
+.tile_container{
+    align-items: center;
+}
+.vertical{
+    display:grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: 1fr 1fr 17fr 2fr 4fr;
+    
+    }
+
+.vertical .name_display{
+    grid-row:1;
+    
+    }
+.vertical .score_display{
+    grid-row:2;
+    }
+.vertical .tile_holder{
+    grid-row:3;
+    }
+.name_display,.score_display{
+    
+    font-size: 3vh;  
+    text-align: left;
+}
+.horizontal{
+    display:grid;
+    grid-template-columns:1fr 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+
+.horizontal .name_display{
+    grid-row:1;
+    
+    }
+.horizontal .score_display{
+    grid-row:2;
+    }
+.horizontal .tile_holder{
+    grid-row:1/3;
+    grid-column:2/4;
+    padding-left: 6vh;
+    }
+.name_display,.score_display{    
+    font-size: 2.4vh;    
+}
+.vertical .name_display,.vertical .score_display{
+    padding-left: 7vh;
+}
+.vertical .delete_img{
+    justify-self: center;
+}
+.horizontal .name_display,.horizontal .score_display{
+    padding-left: 2vh;
+    vertical-align: text-bottom;
+    
+    /*display: flex;
+    justify-content:baseline;*/
+    
+}
+.horizontal .name_display{
+    align-self:end
+}
+.horizontal .score_display{
+    align-self:start
+}
+.delete_img,.challenge_button{
+    justify-self: center;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+
+
+
+.tile_holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tile{
+    width:5vh;
+    height:5vh;
+    border-width: 1px 3px 3px 1px;
+    border-style: solid ridge ridge solid;
+    border-radius:10%;   
+
+}
+
+.tile p:first-child{
+    font-size: 3vh;
+    margin-top: 0.5vh;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+
+.tile p:last-child{
+    margin-top: 0;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+    text-align: right;
+
+}
+.delete_img{
+    width:7vh;
+}
+.delete_img:hover{
+    opacity:0.5
+}
+.delete_img:active{
+    opacity:0.2
+}
+.challenge_button{
+    width: fit-content;
+    justify-self:center;
+    padding:0;
+    font-size: 2vh;
+}
+
+.placed{
+    margin:0px;
+    background-color:white;
+    width:70%;
+    height:70%;
+    border-width: 0.5px 1.5px 1.5px 0.5px;
+    border-style: solid ridge ridge solid;
+    position:absolute
+
+}
+.placed p:first-child{
+    font-size: 2vh;
+    margin-top: 0vh;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+
+.tile p:last-child{
+    margin-top: 0;
+    margin-bottom: 0.2vh;
+    font-size: 0.8vh;
+    text-align: right;
+
+}
+
+.action_bar{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.score_button,.draw_button{
+    margin:5vh;
+}
